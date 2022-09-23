@@ -11,9 +11,9 @@
 </head>
 <body>
   <div class ="container">
-      <img src="images/blackKnightSmall.jpg" alt="An image of a black knight chess piece, facing to the right.">
-      <h1>Welcome to Knight Pizza Company</h1>
-      <img src="images/blackKnightReversedSmall.jpg" alt="An image of a black knight chess piece, facing to the left.">
+    <img src="images/blackKnightSmall.jpg" alt="An image of a black knight chess piece, facing to the right.">
+    <span class="title"><h1>Welcome to Knight Pizza Company</h1></span>
+    <img src="images/blackKnightReversedSmall.jpg" alt="An image of a black knight chess piece, facing to the left.">
     <div class="row">
       <div class="col-md-4"></div>
       <div class="col-md-4"><h2><small><em>To Protect and Serve... Pizza!</em></small></h2></div>
@@ -22,13 +22,41 @@
     <hr>
     <div class = "row">
       <div class="col-md-4">
-        <h5>Order Name:</h5>
-        <input type="text" id="new-first-name" name="new-first-name">
-        <br>
-        <br>
-        <h5>Select your Pizza Size:</h5>
-        <li>Small</li>
-
+        <h2>Your Order</h2>
+        <form>
+          <fieldset>
+            <label for="order-name">Name:</label>
+            <input type="text" id="order-name" name="order-name"><br>
+            <h3>Select your Pizza Size:</h3>
+            <input type="radio" id="small" name="pizza-size" value="small" >
+            <label for="small">Small/Personal (10")</label><br>
+            <input type="radio" id="medium" name="pizza-size" value="medium">
+            <label for="medium">Medium (12")</label><br>
+            <input type="radio" id="large" name="pizza-size" value="large">
+            <label for="large">Large (14")</label><br>
+            <input type="radio" id="family" name="pizza-size" value="family">
+            <label for="family">Family Size (14")</label><br>
+            <h3> Select Your Pizza Toppings</h3>
+            <fieldset>
+              <p> All pizzas come with cheese and house-made tomato sauce on a traditional, from-scratch crust.</p>
+              <p>All toppings are $1.50 each.</p>
+              <input type="checkbox" id="extra-cheese" name="toppings">
+              <label for="extra-cheese">Extra Cheese</label><br>
+              <input type="checkbox" id="pepperoni" name="toppings">
+              <label for="pepperoni">Pepperoni</label><br>
+              <input type="checkbox" id="sausage" name="toppings">
+              <label for="sausage">Italian Sausage</label><br>
+              <input type="checkbox" id="olives" name="toppings">
+              <label for="olives">Black Olives</label><br>
+              <input type="checkbox" id="green-pepper" name="toppings">
+              <label for="green-pepper"> Green Pepper</label><br>
+              <input type="checkbox" id="ham" name="toppings">
+              <label for="ham">Ham</label><br>
+              <input type="checkbox" id="pineapple" name="toppings">
+              <label for="pineapple">Pineapple</label><br>
+            </fieldset>
+          </fieldset>
+        </form>
       </div>
     </div>
 

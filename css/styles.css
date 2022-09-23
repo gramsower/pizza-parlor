@@ -2,3 +2,6 @@ body {
   background-image: url("images/background_pizza.jpg");
 }
 
+.title {
+  text-align: center;
+}
