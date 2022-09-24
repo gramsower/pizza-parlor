@@ -21,19 +21,21 @@
     <div class = "row">
       <div class="col-md-4">
         <h2>Your Order</h2>
-        <form>
+        <form id="new-order">
           <fieldset>
-            <label for="order-name">Name:</label>
-            <input type="text" id="order-name" name="order-name"><br>
-            <h3>Select your Pizza Size:</h3>
-            <input type="radio" id="small" name="pizza-size" value="small" >
-            <label for="small">Small/Personal (10")</label><br>
-            <input type="radio" id="medium" name="pizza-size" value="medium">
-            <label for="medium">Medium (12")</label><br>
-            <input type="radio" id="large" name="pizza-size" value="large">
-            <label for="large">Large (14")</label><br>
-            <input type="radio" id="family" name="pizza-size" value="family">
-            <label for="family">Family Size (14")</label><br>
+            <div id = "size">
+              <label for="order-name">Name:</label>
+              <input type="text" id="order-name" name="order-name"><br>
+              <h3>Select your Pizza Size:</h3>
+              <input type="radio" id="small" name="pizza-size" value="small" >
+              <label for="small">Small/Personal (10")</label><br>
+              <input type="radio" id="medium" name="pizza-size" value="medium">
+              <label for="medium">Medium (12")</label><br>
+              <input type="radio" id="large" name="pizza-size" value="large">
+              <label for="large">Large (14")</label><br>
+              <input type="radio" id="family" name="pizza-size" value="family">
+              <label for="family">Family Size (14")</label><br>
+            </div>
             <h3> Select Your Pizza Toppings</h3>
             <fieldset>
               <p> All pizzas come with cheese and house-made tomato sauce on a traditional, from-scratch crust.</p>
@@ -53,16 +55,17 @@
               <input type="checkbox" id="pineapple" name="toppings">
               <label for="pineapple">Pineapple</label><br>
             </fieldset>
-            <h3>Your total is: <span id="total"></span><br>
-            </h3>
+            <h3>Your total is: <span id="total"></span></h3><br>
             <button type="submit">Place Order</button>
           </fieldset>
         </form>
       </div>
     </div>
-  <div class="col-md-4">
+  <div id="order-summary" class="hidden">
     <h2> Your Order Summary:</h2>
-    <span id="order-summary"></span>
+    <p>Pizza Size: <span id="pizza-size"></span></p>
+    <p>Pizza Toppings: <span id="pizza-toppings"></span></p>
+    <p>Order Total: <span id="order-price"></span></p>
   </div>
 
   

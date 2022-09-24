@@ -2,6 +2,10 @@ body {
   background-image: url("images/background_pizza.jpg");
 }
 
+.hidden {
+  display: none;
+}
+
 .title {
   text-align: center;
 }

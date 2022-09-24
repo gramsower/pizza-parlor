@@ -8,11 +8,9 @@ Expected Output: Pizza { customerName: "John", size: "medium", toppings: ["ham",
 
 Describe: orderPrice(size, topping)
 Test: "It should return the price of a pizza without any additional toppings."
-Code: const orderPrice = new orderPrice("medium")
+Code: const orderPrice = new orderPrice("medium", "0")
 Expected output: 17
 
 Test: "It should return the price of a pizza with one additional topping."
-Code: const orderPrice = new orderPrice("medium", "2");
-Expected output: 20
-
-
+Code: const orderPrice = new orderPrice("medium", "1");
+Expected output: 18.5
