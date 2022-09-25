@@ -4,8 +4,6 @@
 
 ## Build and Price a Personal Pizza
 
-<img src="/images/pizza-slice_1620233.jpg" alt="Graphic representation of a slice of piza">
-
 ### Technologies used
 * HTML
 * Javascript
