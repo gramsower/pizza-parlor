@@ -1,15 +1,15 @@
 // Business Logic for Pizza Order --------------
-function Pizza(customerName, pizzaSize, pizzaToppings) {
-  this.customerName = customerName;
-  this.pizzaSize = pizzaSize;
-  this.pizzaToppings = pizzaToppings;
-  this.price = this.orderPrice;
+function Pizza(customerName, pizzaSize, pizzaToppings, numberToppings) {
+  this.custName = customerName;
+  this.size = pizzaSize;
+  this.pToppings = pizzaToppings;
+  this.numToppings = numberToppings;
+  this.price = this.orderPrice(pizzaSize, numberToppings);
 }
 
 // Business Logic for Pizza Price --------------
-Pizza.prototype.orderPrice = function(pizzaSize, pizzaToppings) {
+Pizza.prototype.orderPrice = function(pizzaSize, numberToppings) {
   let price = 0;
-  let numberToppings = parseInt(pizzaToppings);
   if (pizzaSize === "small") {
     price += 14;
   } else if (pizzaSize === "medium") {
@@ -28,12 +28,10 @@ Pizza.prototype.orderPrice = function(pizzaSize, pizzaToppings) {
   return price;
 };
 
-
-
+Pizza.prototype.orderSummary = function() {
+  
 
 // UI Logic
-let pizza = new Pizza();
-
 function handleOrderSubmission(event) {
   event.preventDefault();
   const inputtedName = document.querySelector("input#order-name").value;
@@ -45,7 +43,10 @@ function handleOrderSubmission(event) {
     selectedToppings.push(toppings[i].value);
    }
   }
-  console.log(inputtedName, pizzaSize, selectedToppings);
+  let numberToppings = selectedToppings.length;
+  let newOrder = new Pizza(inputtedName, pizzaSize, selectedToppings, numberToppings);
+
+  let orderSummary = newOrder.summary();
 };
 
 window.addEventListener("load", function() {

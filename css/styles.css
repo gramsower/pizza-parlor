@@ -1,11 +1,43 @@
 body {
-  background-image: url("images/background_pizza.jpg");
+  background-image: url("/images/background_pizza.jpg");
+  background-repeat: no-repeat;
+  font-family: Georgia, Times, 'Times New Roman', serif;
 }
 
 .hidden {
+  padding: 5px;
   display: none;
+  margin: 50px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
-.title {
+fieldset {
+  padding: 20px;
+  margin: 50px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+}
+
+legend {
+  background-color: rgba(102, 102, 102, 0.377);
+  border: 2px groove;
+  margin-left: 55px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 10px;
+  font-family: 'Lucida Grande';
+  font-size: 30px;
+}
+
+.order-form {
+  margin: 5px;
+  color: white;
+}
+
+.title-box {
+  margin: 50px;
+  color: white;
   text-align: center;
 }

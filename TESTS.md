@@ -7,6 +7,7 @@ Code: const myPizza = new Pizza("John", "medium", ["ham", "pineapple"], "$20.00"
 Expected Output: Pizza { customerName: "John", size: "medium", toppings: ["ham", "pineapple"], price: "20.00" }
 
 Describe: orderPrice(size, topping)
+
 Test: "It should return the price of a pizza without any additional toppings."
 Code: const orderPrice = new orderPrice("medium", "0")
 Expected output: 17
