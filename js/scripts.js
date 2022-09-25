@@ -29,7 +29,7 @@ Pizza.prototype.orderPrice = function(pizzaSize, numberToppings) {
 };
 
 Pizza.prototype.ordSumm = function() {
-  let summary = "Size: " + this.size + "\nToppings: " + this.pToppings + "\n" + "Total Price: $"+ this.price;
+  let summary = "Size: " + this.size + "\nToppings: " + this.pToppingsg + "\n" + "Total Price: $"+ this.price;
   return summary;
 };
 
@@ -46,6 +46,7 @@ function handleOrderSubmission(event) {
    }
   };
   const numberToppings = selectedToppings.length;
+
   let newOrder = new Pizza(inputtedName, pizzaSize, selectedToppings, numberToppings);
   let orderSummary = newOrder.ordSumm();
 

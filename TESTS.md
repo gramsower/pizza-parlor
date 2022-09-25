@@ -20,4 +20,7 @@ Expected output: 18.5
 Describe: orderSummary()
 
 Test: It should return a string, summarizing the order.
-COde: const orderSummary = new 
+COde: const orderSummary = "Size: " + this.size + "\nToppings: " + this.toppings + "\nPrice: " + this.price"
+Expected Output: "Size: [pizza size]
+                  Toppings: [list of toppings]
+                  Total Price: [price]"

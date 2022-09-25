@@ -30,6 +30,8 @@ The user should navigate to the public website [insert address link here upon cr
 
 ## Known Bugs
 
+Return values of additional toppings are not treated as strings, capitalized appropriately, and 
+
 ## License
 
 _GNU GPL_
