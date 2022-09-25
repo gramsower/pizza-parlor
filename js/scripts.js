@@ -37,14 +37,17 @@ let pizza = new Pizza();
 function handleOrderSubmission(event) {
   event.preventDefault();
   const inputtedName = document.querySelector("input#order-name").value;
-  const pizzaSize = document.querySelector("input#pizza-size").value;
-  const toppings = [];
-  const topping1 = document.getElementById(
-  
-
-
-}
+  const pizzaSize = document.querySelector("input[name='pizza-size']:checked").value;
+  const toppings = document.getElementsByName("toppings");
+  const selectedToppings=[];
+  for(let i=0; i < toppings.length; i+=1){
+    if(toppings[i].checked === true) {
+    selectedToppings.push(toppings[i].value);
+   }
+  }
+  console.log(inputtedName, pizzaSize, selectedToppings);
+};
 
 window.addEventListener("load", function() {
-  document.querySelector("form#new-order").addEventListener("submit", handleFormSubmission);
+  document.querySelector("form#new-order").addEventListener("submit", handleOrderSubmission);
 });

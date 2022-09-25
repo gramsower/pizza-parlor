@@ -40,20 +40,22 @@
             <fieldset>
               <p> All pizzas come with cheese and house-made tomato sauce on a traditional, from-scratch crust.</p>
               <p>All toppings are $1.50 each.</p>
-              <input type="checkbox" id="extra-cheese" name="toppings">
-              <label for="extra-cheese">Extra Cheese</label><br>
-              <input type="checkbox" id="pepperoni" name="toppings">
-              <label for="pepperoni">Pepperoni</label><br>
-              <input type="checkbox" id="sausage" name="toppings">
-              <label for="sausage">Italian Sausage</label><br>
-              <input type="checkbox" id="olives" name="toppings">
-              <label for="olives">Black Olives</label><br>
-              <input type="checkbox" id="green-pepper" name="toppings">
-              <label for="green-pepper"> Green Pepper</label><br>
-              <input type="checkbox" id="ham" name="toppings">
-              <label for="ham">Ham</label><br>
-              <input type="checkbox" id="pineapple" name="toppings">
-              <label for="pineapple">Pineapple</label><br>
+              <form id = "select-toppings">
+                <input type="checkbox" id="extra-cheese" name="toppings" value="extra-cheese">
+                <label for="extra-cheese">Extra Cheese</label><br>
+                <input type="checkbox" id="pepperoni" name="toppings" value="pepperoni">
+                <label for="pepperoni">Pepperoni</label><br>
+                <input type="checkbox" id="sausage" name="toppings" value="sausage">
+                <label for="sausage">Italian Sausage</label><br>
+                <input type="checkbox" id="olives" name="toppings" value="olives">
+                <label for="olives">Black Olives</label><br>
+                <input type="checkbox" id="green-pepper" name="toppings" value="green-pepper">
+                <label for="green-pepper"> Green Pepper</label><br>
+                <input type="checkbox" id="ham" name="toppings" value="ham">
+                <label for="ham">Ham</label><br>
+                <input type="checkbox" id="pineapple" name="toppings" value="pineapple">
+                <label for="pineapple">Pineapple</label><br>
+              </form>
             </fieldset>
             <h3>Your total is: <span id="total"></span></h3><br>
             <button type="submit">Place Order</button>
