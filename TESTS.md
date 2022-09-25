@@ -15,3 +15,9 @@ Expected output: 17
 Test: "It should return the price of a pizza with one additional topping."
 Code: const orderPrice = new orderPrice("medium", "1");
 Expected output: 18.5
+
+
+Describe: orderSummary()
+
+Test: It should return a string, summarizing the order.
+COde: const orderSummary = new 

@@ -2,6 +2,7 @@ body {
   background-image: url("/images/background_pizza.jpg");
   background-repeat: no-repeat;
   font-family: Georgia, Times, 'Times New Roman', serif;
+  color: white;
 }
 
 .hidden {

@@ -28,8 +28,10 @@ Pizza.prototype.orderPrice = function(pizzaSize, numberToppings) {
   return price;
 };
 
-Pizza.prototype.orderSummary = function() {
-  
+Pizza.prototype.ordSumm = function() {
+  let summary = "Size: " + this.size + "\nToppings: " + this.pToppings + "\n" + "Total Price: $"+ this.price;
+  return summary;
+};
 
 // UI Logic
 function handleOrderSubmission(event) {
@@ -42,11 +44,15 @@ function handleOrderSubmission(event) {
     if(toppings[i].checked === true) {
     selectedToppings.push(toppings[i].value);
    }
-  }
-  let numberToppings = selectedToppings.length;
+  };
+  const numberToppings = selectedToppings.length;
   let newOrder = new Pizza(inputtedName, pizzaSize, selectedToppings, numberToppings);
+  let orderSummary = newOrder.ordSumm();
 
-  let orderSummary = newOrder.summary();
+  document.getElementById("order-summary-div").removeAttribute("class");
+  document.getElementById("cust-name").innerText = inputtedName;
+  document.getElementById("order-summary").innerText = orderSummary;
+  document.getElementById("order-summary").removeAttribute("class");
 };
 
 window.addEventListener("load", function() {
